@@ -1,0 +1,96 @@
+$DarkGreen: #327160;
+$SeaGreen: #7dc2a6;
+$PaleGreen: #c8e6c4;
+$BlackishGray: #303225;
+$WhiteishGreen: #e8f3e5;
+
+* {
+  box-sizing: inherit;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Footer {
+  padding: 5px;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.Content {
+  flex-grow: 1;
+}
+
+.RobotoLight{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.SlabBold{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
+
+.CenterText {
+  text-align: center;
+}
+
+.JustifyText {
+  text-align: justify;
+  text-align-last: center;
+}
+
+.White {
+  color: white;
+}
+
+.DarkGreen {
+  color: $DarkGreen;
+}
+
+.DarkGreenBg {
+  background-color: $DarkGreen;
+}
+
+.SeaGreen {
+  color: $SeaGreen;
+}
+
+.SeaGreenBg {
+  background-color: $SeaGreen;
+}
+
+.PaleGreen {
+  color: $PaleGreen;
+}
+
+.PaleGreenBg {
+  background-color: $PaleGreen;
+}
+
+.WhiteishGreen {
+  color: $WhiteishGreen;
+}
+
+.WhiteishGreenBg {
+  background-color: $WhiteishGreen;
+}
+
+.BlackishGray {
+  color: $BlackishGray;
+}
+
+.BlackishGrayBg {
+  background-color: $BlackishGray;
+}

@@ -1,0 +1,22 @@
+.SideDrawer{
+  position: fixed;
+  width: 75%;
+  height: 100%;
+  top: 0%;
+  left: -75%;
+  background-color: #327160d6;
+  transition: 0.3s;
+  z-index: 150;
+  ul{
+    position: relative;
+    top: 200px;
+    list-style-type: none;
+    li{
+      margin-top: 30px;
+    }
+  }
+}
+
+.Show {
+  left: 0%;
+}

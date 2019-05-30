@@ -1,0 +1,83 @@
+.Navbar {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  line-height: 2.25rem;
+  padding: 30px 250px;
+  z-index: 100;
+  background-color: #30322560;
+  * {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .Logo {
+    font-size: 2.25rem;
+    margin-right: auto;
+    z-index: 200;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  li {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.5rem;
+    cursor: pointer;
+    &:hover {
+      color: white;
+    }
+  }
+  &.Fixed {
+    position: fixed;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    top: 0;
+    background-color: #303225c0;
+    animation: FixedEntrance ease-out 0.3s;
+  }
+}
+
+.Burger {
+  cursor: pointer;
+  div {
+    width: 36px;
+    height: 4px;
+    background-color: white;
+    margin: 8px;
+  }
+}
+
+@keyframes FixedEntrance {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@media (max-width: 1400px) {
+  .Navbar {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 960px) {
+  .Navbar {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .Navbar {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

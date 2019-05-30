@@ -1,0 +1,26 @@
+.Backdrop {
+  opacity: 0;
+  z-index: 50;
+  display: none;
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  top: 0%;
+  left: 75%;
+  transition: 0.3;
+}
+
+.Show {
+  display: block;
+  animation: Show 0.3s;
+  opacity: 1;
+}
+
+@keyframes Show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
