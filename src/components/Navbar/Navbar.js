@@ -5,8 +5,11 @@ import classes from "./Navbar.module.scss"
 import SideDrawer from "./SideDrawer/SideDrawer"
 
 const Navbar = () => {
+  let showBurger, toggleBurger;
   const [navIsFixed, toggleNav] = useState(false)
-  const [showBurger, toggleBurger] = useState(document.body.clientWidth < 960)
+  if (typeof document !== `undefined`) {
+    [showBurger, toggleBurger] = useState(document.body.clientWidth < 960)
+  }
   const [showSideDrawer, toggleSideDrawer] = useState(false)
 
   const checkBurger = () => {
