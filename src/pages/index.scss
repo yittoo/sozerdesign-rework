@@ -1,7 +1,8 @@
 .InitialBackground {
-  background: url(../images/images/circuitboard.jpg);
-  min-height: 100vh;
-  background-size: cover;
+  // .gatsby-image-wrapper {
+    height: 100vh;
+    background-size: cover;
+  // }
 }
 
 .MarginCenter {
@@ -270,17 +271,18 @@
   @media (max-width: 960px) {
     h2 {
       margin: 16px;
-      text-align: center
+      text-align: center;
     }
     form {
       flex-flow: column;
     }
-    .col-narrow, .col-wide {
+    .col-narrow,
+    .col-wide {
       width: 100%;
       max-width: 600px;
       margin: 0 auto;
     }
-    button{
+    button {
       width: 100%;
       margin-top: 1rem;
       margin-right: auto;
