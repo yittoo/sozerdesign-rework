@@ -87,9 +87,11 @@ const Navbar = () => {
         classes.Navbar + " WhiteishGreen " + (navIsFixed ? classes.Fixed : "")
       }
     >
-      <span className={classes.Logo + " White SlabBold"}>
-        <Link to="/">SozerDesign</Link>
-      </span>
+      <li>
+        <span className={classes.Logo + " White SlabBold"}>
+          <Link to="/">SozerDesign</Link>
+        </span>
+      </li>
       {contentToRender}
     </ul>
   )

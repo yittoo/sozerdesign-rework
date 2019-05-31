@@ -28,7 +28,7 @@ export const Services = () => {
   return (
     <div id="Services" className="BlackishGray Container">
       <div className="col">
-        <Img fluid={{ ...castedImgs.responsive }} />
+        <Img alt="responsive" fluid={{ ...castedImgs.responsive }} />
         <h2 className="CenterText SlabBold">EVERY DEVICE</h2>
         <p className="JustifyText">
           With modern Responsive Design techniques your website will be
@@ -36,7 +36,7 @@ export const Services = () => {
         </p>
       </div>
       <div className="col">
-        <Img fluid={{ ...castedImgs.server }} />
+        <Img alt="server" fluid={{ ...castedImgs.server }} />
         <h2 className="CenterText SlabBold">0 TO 100</h2>
         <p className="JustifyText">
           Including domain purchases; I'll be either guiding you and simply
@@ -45,7 +45,7 @@ export const Services = () => {
         </p>
       </div>
       <div className="col">
-        <Img fluid={{ ...castedImgs.api }} />
+        <Img alt="api" fluid={{ ...castedImgs.api }} />
         <h2 className="CenterText SlabBold">INTEGRATION</h2>
         <p className="JustifyText">
           If you want to have access to changing your content over time, or need

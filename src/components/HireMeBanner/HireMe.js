@@ -29,9 +29,9 @@ const HireMe = ({onToggleCV}) => {
   })
   const imgToRender = (
     <div className={classes.ContactIcons}>
-      <a href="https://www.linkedin.com/in/yi%C4%9Fit-s%C3%B6zer/" rel="noreferrer noopener" target="_blank"><Img fixed={{...castedImgs["linkedin"]}} /></a>
-      <a href="https://github.com/yittoo" rel="noreferrer noopener" target="_blank"><Img fixed={{...castedImgs["github"]}} /></a>
-      <div onClick={onToggleCV}><Img key={0} fixed={{...castedImgs["cv"]}} /></div>
+      <a href="https://www.linkedin.com/in/yi%C4%9Fit-s%C3%B6zer/" rel="noreferrer noopener" target="_blank"><Img alt="linkedin" fixed={{...castedImgs["linkedin"]}} /></a>
+      <a href="https://github.com/yittoo" rel="noreferrer noopener" target="_blank"><Img alt="github" fixed={{...castedImgs["github"]}} /></a>
+      <div onClick={onToggleCV}><Img key={0} alt="cv" fixed={{...castedImgs["cv"]}} /></div>
     </div>
   )
   return (

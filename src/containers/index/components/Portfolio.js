@@ -30,7 +30,7 @@ const Portfolio = () => {
       </p>
       <div className="Flex Flex-2">
         <div className="col-2 Image">
-          <Img fluid={{ ...data.allFile.nodes[1].childImageSharp.fluid }} />
+          <Img alt="clock" fluid={{ ...data.allFile.nodes[1].childImageSharp.fluid }} />
         </div>
         <div className="col-2">
           <h3 className="CenterText White SlabBold">Boss Time Tracker:</h3>
@@ -42,7 +42,7 @@ const Portfolio = () => {
               href="https://mvp-ro.com"
               rel="noopener noreferrer"
             >
-              here
+              "this site"
             </a>
             . This site is React / Redux driven web app built with Serverless
             Architecture and is currently serving 200 monthly active users with
@@ -67,12 +67,12 @@ const Portfolio = () => {
               href="https://obscure-lowlands-21426.herokuapp.com/"
               rel="noopener noreferrer"
             >
-              here
+              "Heroku Demo"
             </a>
           </p>
         </div>
         <div className="col-2 Image">
-          <Img fluid={{ ...data.allFile.nodes[0].childImageSharp.fluid }} />
+          <Img alt="stetescope" fluid={{ ...data.allFile.nodes[0].childImageSharp.fluid }} />
         </div>
       </div>
     </div>
