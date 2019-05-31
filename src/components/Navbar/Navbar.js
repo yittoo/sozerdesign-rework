@@ -47,19 +47,19 @@ const Navbar = () => {
   )
 
   const navItems = [
-    <li key="7">
+    <li className={classes.NavItem} key="7">
       <Link to="/#About">ABOUT</Link>
     </li>,
-    <li key="9">
+    <li className={classes.NavItem} key="9">
       <Link to="/#Seo">SEO</Link>
     </li>,
-    <li key="0">
+    <li className={classes.NavItem} key="0">
       <Link to="/#Services">SERVICES</Link>
     </li>,
-    <li key="1">
+    <li className={classes.NavItem} key="1">
       <Link to="/#Portfolio">PORTFOLIO</Link>
     </li>,
-    <li key="2">
+    <li className={classes.NavItem} key="2">
       <Link to="/#Contact">CONTACT</Link>
     </li>,
     // <li key="3">CAREER</li>,
@@ -87,10 +87,8 @@ const Navbar = () => {
         classes.Navbar + " WhiteishGreen " + (navIsFixed ? classes.Fixed : "")
       }
     >
-      <li>
-        <span className={classes.Logo + " White SlabBold"}>
-          <Link to="/">SozerDesign</Link>
-        </span>
+      <li className={classes.Logo + " White SlabBold"}>
+        <Link to="/">SozerDesign</Link>
       </li>
       {contentToRender}
     </ul>
