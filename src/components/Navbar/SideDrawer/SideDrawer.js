@@ -9,7 +9,7 @@ const SideDrawer = ({ items, show, clicked }) => {
   return (
     <div className={sidedrawerClasses.join(" ")}>
       <ul>{items ? items.map(item => item) : null}</ul>
-      <Backdrop clicked={clicked} show={show} />
+      <Backdrop clicked={clicked} show={show} type="sidedrawer" />
     </div>
   )
 }

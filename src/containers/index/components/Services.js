@@ -31,24 +31,25 @@ export const Services = () => {
         <Img fluid={{ ...castedImgs.responsive }} />
         <h2 className="CenterText SlabBold">EVERY DEVICE</h2>
         <p className="JustifyText">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum alias
-          vitae numquam quas hic, animi eligendi aliquam ut omnis nesciunt!
+          With modern Responsive Design techniques your website will be
+          accessable by Phones, Tablets, Laptops and WideScreens.
         </p>
       </div>
       <div className="col">
         <Img fluid={{ ...castedImgs.server }} />
         <h2 className="CenterText SlabBold">0 TO 100</h2>
         <p className="JustifyText">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum alias
-          vitae numquam quas hic, animi eligendi aliquam ut omnis nesciunt!
+          Including domain purchases; I'll be either guiding you and simply
+          setting it up for you including server configurations to host your
+          site on.
         </p>
       </div>
       <div className="col">
         <Img fluid={{ ...castedImgs.api }} />
-        <h2 className="CenterText SlabBold">API INTEGRATION</h2>
+        <h2 className="CenterText SlabBold">INTEGRATION</h2>
         <p className="JustifyText">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum alias
-          vitae numquam quas hic, animi eligendi aliquam ut omnis nesciunt!
+          If you want to have access to changing your content over time, or need
+          an integration with another service. That can and will be done.
         </p>
       </div>
     </div>

@@ -17,18 +17,18 @@ const Seo = () => {
   return (
     <div id="Seo" className="Container">
       <div className="col">
-        <Img fluid={data.file.childImageSharp.fluid} />
+        <Img alt="seo graph" fluid={data.file.childImageSharp.fluid} />
       </div>
       <div className="col">
         <h2 className="CenterText White SlabBold">
           BETTER TECH BETTER UX <br /> BETTER SEO MORE CLICKS
         </h2>
         <p className="JustifyText WhiteishGreen">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. At dolorem
-          sapiente neque enim architecto earum quos possimus dolores voluptate,
-          labore repudiandae, nulla eligendi quasi culpa voluptates suscipit,
-          aliquam fuga corporis magnam rem! Cupiditate odit dignissimos nostrum,
-          perferendis dolores quae sed!
+          You have the better tech, it will provide better User Experience (UX),
+          your pages will be rendered on server thus Search Engine Crawlers will
+          give you the best possible grades on their charts thus providing more
+          clicks. You'll get service that can not be obtained with similars of
+          WordPress. Which compared to this technology will always be slower.
         </p>
       </div>
     </div>

@@ -94,3 +94,35 @@ body {
 .BlackishGrayBg {
   background-color: $BlackishGray;
 }
+
+#CV {
+  display: none;
+  &.Show{
+    display: block;
+    animation: FadeIn 0.3s ease-out;
+  }
+  position: fixed;
+  left: 50%;
+  width: 60%;
+  margin-left: -30%;
+  max-height: 95%;
+  max-width: 1000px;
+  top: 2.5%;
+  z-index: 300;
+  padding: 10px;
+  background-color: #aaa;
+  overflow: auto;
+  @media (max-width: 960px) {
+    width: 80%;
+    margin-left: -40%;
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

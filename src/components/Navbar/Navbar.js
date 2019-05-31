@@ -5,10 +5,10 @@ import classes from "./Navbar.module.scss"
 import SideDrawer from "./SideDrawer/SideDrawer"
 
 const Navbar = () => {
-  let showBurger, toggleBurger;
+  let showBurger, toggleBurger
   const [navIsFixed, toggleNav] = useState(false)
   if (typeof document !== `undefined`) {
-    [showBurger, toggleBurger] = useState(document.body.clientWidth < 960)
+    ;[showBurger, toggleBurger] = useState(document.body.clientWidth < 960)
   }
   const [showSideDrawer, toggleSideDrawer] = useState(false)
 
@@ -47,13 +47,25 @@ const Navbar = () => {
   )
 
   const navItems = [
-    <li key="0">SERVICES</li>,
-    <li key="1">PORTFOLIO</li>,
-    <li key="2">CONTACT</li>,
-    <li key="3">CAREER</li>,
-    <li key="4">
-      <Link to="/blog">BLOG</Link>
+    <li key="7">
+      <Link to="/#About">ABOUT</Link>
     </li>,
+    <li key="9">
+      <Link to="/#Seo">SEO</Link>
+    </li>,
+    <li key="0">
+      <Link to="/#Services">SERVICES</Link>
+    </li>,
+    <li key="1">
+      <Link to="/#Portfolio">PORTFOLIO</Link>
+    </li>,
+    <li key="2">
+      <Link to="/#Contact">CONTACT</Link>
+    </li>,
+    // <li key="3">CAREER</li>,
+    // <li key="4">
+    //   <Link to="/blog">BLOG</Link>
+    // </li>,
   ]
 
   const contentToRender = showBurger ? (
@@ -70,18 +82,16 @@ const Navbar = () => {
   )
 
   return (
-    <div className="Container">
-      <ul
-        className={
-          classes.Navbar + " WhiteishGreen " + (navIsFixed ? classes.Fixed : "")
-        }
-      >
-        <span className={classes.Logo + " White SlabBold"}>
-          <Link to="/">SozerDesign</Link>
-        </span>
-        {contentToRender}
-      </ul>
-    </div>
+    <ul
+      className={
+        classes.Navbar + " WhiteishGreen " + (navIsFixed ? classes.Fixed : "")
+      }
+    >
+      <span className={classes.Logo + " White SlabBold"}>
+        <Link to="/">SozerDesign</Link>
+      </span>
+      {contentToRender}
+    </ul>
   )
 }
 

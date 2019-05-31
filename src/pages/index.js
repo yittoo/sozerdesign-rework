@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
@@ -10,8 +10,10 @@ import IndexContainer from "../containers/index"
 import Helmet from "../components/HelmetGenerator/HelmetGenerator"
 import About from "../containers/index/components/About"
 import "./index.scss"
+import CV from "../components/CV/CV"
 
 const Index = () => {
+  const [showCV, toggleCV] = useState(false)
   const data = useStaticQuery(graphql`
     query {
       file(name: { eq: "circuitboard" }) {
@@ -23,16 +25,20 @@ const Index = () => {
       }
     }
   `)
+  const toggleCvHandler = () => {
+    toggleCV(!showCV)
+  }
   const imgData = data.file.childImageSharp.fluid
   return (
     <Layout>
       <Helmet title="Welcome" />
       <BackgroundImage fluid={imgData} className="InitialBackground">
-        <HireMe />
+        <HireMe onToggleCV={toggleCvHandler} />
         <Header />
         <About />
       </BackgroundImage>
       <IndexContainer />
+      <CV show={showCV} onToggleCV={toggleCvHandler} />
     </Layout>
   )
 }
