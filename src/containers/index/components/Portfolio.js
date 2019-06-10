@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-const Portfolio = () => {
+const Portfolio = ({animate}) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { name: { in: ["stethoscope", "wall-clock"] } }) {
@@ -24,15 +24,15 @@ const Portfolio = () => {
         <div className="col-3 Placeholder">PLACEHOLDER</div>
         <div className="col-3 Placeholder">PLACEHOLDER</div>
       </div> */}
-      <h3 className="CenterText White SlabBold">OWN PROJECTS</h3>
-      <p className="JustifyText WhiteishGreen">
+      <h3 className={`CenterText White SlabBold ${animate ? "EnterFromLeft" : "Transparent"}`}>OWN PROJECTS</h3>
+      <p className={`JustifyText WhiteishGreen ${animate ? "EnterFromRight" : "Transparent"}`}>
         Apart from freelancing I spend my time building my own side projects.
       </p>
       <div className="Flex Flex-2">
-        <div className="col-2 Image">
+        <div className={`col-2 Image ${animate ? "FadeIn" : "Transparent"}`}>
           <Img alt="clock" fluid={{ ...data.allFile.nodes[1].childImageSharp.fluid }} />
         </div>
-        <div className="col-2">
+        <div className={`col-2 ${animate ? "EnterFromBottom" : "Transparent"}`}>
           <h3 className="CenterText White SlabBold">Boss Time Tracker:</h3>
           <p className="JustifyText WhiteishGreen">
             For a game called Ragnarok Online. Players are capable of
@@ -51,7 +51,7 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="Flex Flex-2 FlexOpposite">
-        <div className="col-2">
+        <div className={`col-2 ${animate ? "EnterFromBottom" : "Transparent"}`}>
           <h3 className="CenterText White SlabBold">
             Medical Information Site:
           </h3>
@@ -71,7 +71,7 @@ const Portfolio = () => {
             </a>
           </p>
         </div>
-        <div className="col-2 Image">
+        <div className={`col-2 Image ${animate ? "FadeIn" : "Transparent"}`}>
           <Img alt="stetescope" fluid={{ ...data.allFile.nodes[0].childImageSharp.fluid }} />
         </div>
       </div>

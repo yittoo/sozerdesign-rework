@@ -6,13 +6,17 @@ $WhiteishGreen: #e8f3e5;
 
 * {
   box-sizing: inherit;
-  font-family: 'Roboto', sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 .Layout {
@@ -22,10 +26,10 @@ body {
 }
 
 .Footer {
-  padding: 5px;
+  padding: 0.5rem;
   text-align: center;
   color: #888;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
 }
 
 .Content {
@@ -99,7 +103,7 @@ body {
   display: none;
   &.Show{
     display: block;
-    animation: FadeIn 0.3s ease-out;
+    animation: fadeIn 0.3s ease-out;
   }
   position: fixed;
   left: 50%;
@@ -118,11 +122,67 @@ body {
   }
 }
 
-@keyframes FadeIn {
+.EnterFromRight {
+  animation: enterFromRight 0.8s ease-out;
+}
+
+@keyframes enterFromRight {
   0% {
     opacity: 0;
+    transform: translateX(20%);
+  }
+  80% {
+    transform: translateX(-2%);
   }
   100% {
     opacity: 1;
   }
+}
+
+.EnterFromLeft {
+  animation: enterFromLeft 0.8s ease-out;
+}
+
+@keyframes enterFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  80% {
+    transform: translateX(2%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.EnterFromBottom {
+  animation: enterFromBottom 0.8s ease-out;
+}
+
+@keyframes enterFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.FadeIn {
+  animation: fadeIn 0.8s ease-out
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Transparent {
+  opacity: 0;
 }

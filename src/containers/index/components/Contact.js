@@ -1,52 +1,34 @@
 import React from "react"
 
-const Contact = () => {
+const Contact = ({animate}) => {
   return (
     <div id="Contact" className="Container">
-      <h2 className="SlabBold White">CONTACT:</h2>
+      <h2 className={`SlabBold White ${animate ? "EnterFromRight" : "Transparent"}`}>CONTACT:</h2>
       <form
         action="https://getsimpleform.com/messages?form_api_token=572bb5e13c427d330de8b1a42d08c00f"
         method="post"
-        className="BlackishGray"
+        className={`BlackishGray ${animate ? "EnterFromBottom" : "Transparent"}`}
       >
         <div className="col-narrow">
-          <label>
-            <input
-              type="text"
-              className="PaleGreenBg"
-              placeholder="NAME*"
-              name="name"
-              required
-            />
+          <label className="SlabBold">
+            <span>* NAME:</span>
+            <input type="text" className="PaleGreenBg" name="name" required />
           </label>
-          <label>
-            <input
-              type="text"
-              className="PaleGreenBg"
-              placeholder="EMAIL*"
-              name="email"
-              required
-            />
+          <label className="SlabBold">
+            <span>* EMAIL:</span>
+            <input type="text" className="PaleGreenBg" name="email" required />
           </label>
-          <label>
-            <input
-              type="text"
-              className="PaleGreenBg"
-              placeholder="SUBJECT"
-              name="subject"
-            />
+          <label className="SlabBold">
+            <span>SUBJECT:</span>
+            <input type="text" className="PaleGreenBg" name="subject" />
           </label>
         </div>
         <div className="col-wide">
-          <label>
-            <textarea
-              placeholder="MESSAGE*"
-              className="PaleGreenBg"
-              name="message"
-              required
-            />
+          <label className="TextareaBox SlabBold">
+            <span>* MESSAGE:</span>
+            <textarea className="PaleGreenBg" name="message" required />
           </label>
-          <button className="PaleGreenBg">Submit</button>
+          <button className="PaleGreenBg">SUBMIT</button>
         </div>
       </form>
     </div>

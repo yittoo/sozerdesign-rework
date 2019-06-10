@@ -3,7 +3,7 @@ import path from "path"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-export const Services = () => {
+export const Services = ({animate}) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { name: { in: ["responsive", "api", "server"] } }) {
@@ -27,7 +27,7 @@ export const Services = () => {
   })
   return (
     <div id="Services" className="BlackishGray Container">
-      <div className="col">
+      <div className={`col ${animate ? "EnterFromBottom" : "Transparent"}`}>
         <Img alt="responsive" fluid={{ ...castedImgs.responsive }} />
         <h2 className="CenterText SlabBold">EVERY DEVICE</h2>
         <p className="JustifyText">
@@ -35,20 +35,19 @@ export const Services = () => {
           accessable by Phones, Tablets, Laptops and WideScreens.
         </p>
       </div>
-      <div className="col">
+      <div className={`col ${animate ? "EnterFromBottom" : "Transparent"}`}>
         <Img alt="server" fluid={{ ...castedImgs.server }} />
         <h2 className="CenterText SlabBold">0 TO 100</h2>
         <p className="JustifyText">
           Including domain purchases; I'll be either guiding you and simply
-          setting it up for you including server configurations to host your
-          site on.
+          setting it up for you including server setup to host your site on.
         </p>
       </div>
-      <div className="col">
+      <div className={`col ${animate ? "EnterFromBottom" : "Transparent"}`}>
         <Img alt="api" fluid={{ ...castedImgs.api }} />
         <h2 className="CenterText SlabBold">INTEGRATION</h2>
         <p className="JustifyText">
-          If you want to have access to changing your content over time, or need
+          If you want to have access to changing your content, or need
           an integration with another service. That can and will be done.
         </p>
       </div>

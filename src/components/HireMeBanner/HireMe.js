@@ -28,7 +28,7 @@ const HireMe = ({onToggleCV}) => {
     castedImgs[baseName] = { ...node.childImageSharp.fixed }
   })
   const imgToRender = (
-    <div className={classes.ContactIcons}>
+    <div className={classes.ContactIcons + " FadeIn"}>
       <a href="https://www.linkedin.com/in/yi%C4%9Fit-s%C3%B6zer/" rel="noreferrer noopener" target="_blank"><Img alt="linkedin" fixed={{...castedImgs["linkedin"]}} /></a>
       <a href="https://github.com/yittoo" rel="noreferrer noopener" target="_blank"><Img alt="github" fixed={{...castedImgs["github"]}} /></a>
       <div onClick={onToggleCV}><Img key={0} alt="cv" fixed={{...castedImgs["cv"]}} /></div>
@@ -36,7 +36,7 @@ const HireMe = ({onToggleCV}) => {
   )
   return (
     <div className={classes.HireMe + " DarkGreenBg PaleGreen"}>
-      <p>Are you from HR and like my work? Hire me fulltime</p>
+      <p className="FadeIn">Are you from HR and like my work? Hire me fulltime</p>
       {imgToRender}
     </div>
   )

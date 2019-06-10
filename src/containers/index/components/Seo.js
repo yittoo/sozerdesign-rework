@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-const Seo = () => {
+const Seo = ({animate}) => {
   const data = useStaticQuery(graphql`
     query {
       file(name: { eq: "diagram" }) {
@@ -16,10 +16,10 @@ const Seo = () => {
   `)
   return (
     <div id="Seo" className="Container">
-      <div className="col">
+      <div className={`col ${animate ? "FadeIn" : "Transparent"}`}>
         <Img alt="seo graph" fluid={data.file.childImageSharp.fluid} />
       </div>
-      <div className="col">
+      <div className={`col ${animate ? "EnterFromRight" : "Transparent"}`}>
         <h2 className="CenterText White SlabBold">
           BETTER TECH BETTER UX <br /> BETTER SEO MORE CLICKS
         </h2>
