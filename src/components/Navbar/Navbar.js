@@ -59,9 +59,9 @@ const Navbar = () => {
     <li className={classes.NavItem} key="1">
       <Link to="/#Portfolio">PORTFOLIO</Link>
     </li>,
-    <li className={classes.NavItem} key="2">
-      <Link to="/#Contact">CONTACT</Link>
-    </li>,
+    // <li className={classes.NavItem} key="2">
+    //   <Link to="/#Contact">CONTACT</Link>
+    // </li>,
     // <li key="3">CAREER</li>,
     // <li key="4">
     //   <Link to="/blog">BLOG</Link>
