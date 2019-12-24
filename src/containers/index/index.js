@@ -40,7 +40,7 @@ const IndexContainer = () => {
       <Seo animate={hasAnimated.Seo} />
       <Services animate={hasAnimated.Services} />
       <Portfolio animate={hasAnimated.Portfolio} />
-      <Contact animate={hasAnimated.Contact} />
+      {/* <Contact animate={hasAnimated.Contact} /> */}
     </div>
   )
 }
