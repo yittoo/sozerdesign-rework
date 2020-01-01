@@ -118,6 +118,9 @@
   background-color: rgba($SecondaryColor, 0.8);
   align-items: flex-end;
   .col {
+    img {
+      filter: brightness(4) hue-rotate(200deg);
+    }
     width: 30%;
     margin: 5rem 1.66%;
     div {
@@ -126,11 +129,12 @@
       margin: 0 auto;
     }
     h2 {
-      color: #111;
+      color: $TertiaryColor;
       font-size: 3.5rem;
+      filter: brightness(0.95);
     }
     p {
-      color: #222;
+      color: $ColorWhite1;
       font-size: 2rem;
     }
   }
