@@ -1,17 +1,19 @@
-.SideDrawer{
+@import "../../../styles/variables";
+
+.SideDrawer {
   position: fixed;
   width: 75%;
   height: 100%;
   top: 0%;
   left: -75%;
-  background-color: #327160d6;
+  background-color: rgba($PrimaryColor, 0.95);
   transition: 0.3s;
   z-index: 150;
-  ul{
+  ul {
     position: relative;
     top: 20rem;
     list-style-type: none;
-    li{
+    li {
       margin-top: 3rem;
     }
   }

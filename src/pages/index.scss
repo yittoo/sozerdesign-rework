@@ -1,3 +1,5 @@
+@import "../styles/variables";
+
 .InitialBackground {
   height: 100vh;
   background-size: cover;
@@ -67,25 +69,10 @@
   display: flex;
   padding-top: 10rem;
   padding-bottom: 10rem;
-  background: -moz-linear-gradient(
-    90deg,
-    rgb(125, 194, 166) 0%,
-    rgb(50, 113, 96) 100%
-  );
-  background: -webkit-linear-gradient(
-    90deg,
-    rgb(125, 194, 166) 0%,
-    rgb(50, 113, 96) 100%
-  );
-  background: -ms-linear-gradient(
-    90deg,
-    rgb(125, 194, 166) 0%,
-    rgb(50, 113, 96) 100%
-  );
   background: linear-gradient(
     90deg,
-    rgb(125, 194, 166) 0%,
-    rgb(50, 113, 96) 100%
+    rgba($TertiaryColor, 0.8) 0%,
+    rgba($PrimaryColor, 0.8) 100%
   );
   .col {
     width: 40%;
@@ -128,7 +115,7 @@
 
 #Services {
   display: flex;
-  background-color: #c8e6c4;
+  background-color: rgba($SecondaryColor, 0.8);
   align-items: flex-end;
   .col {
     width: 30%;
@@ -139,9 +126,11 @@
       margin: 0 auto;
     }
     h2 {
+      color: #111;
       font-size: 3.5rem;
     }
     p {
+      color: #222;
       font-size: 2rem;
     }
   }
@@ -162,7 +151,6 @@
 }
 
 #Portfolio {
-  background-color: #327160;
   padding-top: 4rem;
   padding-bottom: 4rem;
   h2 {
@@ -179,7 +167,7 @@
     color: inherit;
   }
   .Placeholder {
-    background-color: white;
+    background-color: #fff;
     height: 40rem;
   }
   .Flex {
@@ -220,7 +208,7 @@
 }
 
 #Contact {
-  background-color: #303225;
+  background-color: $ColorDark1;
   padding-top: 6rem;
   padding-bottom: 12rem;
   h2 {
@@ -249,7 +237,7 @@
     font-size: 2rem;
   }
   label {
-    color: white;
+    color: #fff;
     display: block;
     letter-spacing: 0.1rem;
   }

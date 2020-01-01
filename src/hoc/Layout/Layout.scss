@@ -1,8 +1,4 @@
-$DarkGreen: #327160;
-$SeaGreen: #7dc2a6;
-$PaleGreen: #c8e6c4;
-$BlackishGray: #303225;
-$WhiteishGreen: #e8f3e5;
+@import "../../styles/variables";
 
 * {
   box-sizing: inherit;
@@ -12,7 +8,15 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-color: $PrimaryColor;
+  background: linear-gradient(
+    100deg,
+    rgba($ColorDark1, 1) 0%,
+    rgba($PrimaryColor, 0.9) 6%,
+    rgba($PrimaryColor, 0.8) 70%,
+    rgba($PrimaryColor, 0.8) 100%
+  );
 }
 
 html {
@@ -23,6 +27,58 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.BackgroundPrisms {
+  z-index: -10;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.BackgroundPrism {
+  &-1,
+  &-2,
+  &-3 {
+    position: absolute;
+    transform: skew(-10deg);
+    filter: blur(1px) saturate(2);
+    opacity: 0.4;
+  }
+  &-1 {
+    background: linear-gradient(
+      90deg,
+      rgba($PrimaryColor, 0.9) 0%,
+      rgba($SecondaryColor, 0.2) 100%
+    );
+    right: -5%;
+    bottom: 0%;
+    width: 25%;
+    height: 30%;
+  }
+  &-2 {
+    background: linear-gradient(
+      90deg,
+      rgba($TertiaryColor, 0.1) 0%,
+      rgba($ColorWhite1, 0.7) 100%
+    );
+    right: -5%;
+    bottom: 0%;
+    width: 25%;
+    height: 100%;
+    z-index: -10;
+  }
+  &-3 {
+    // disabled
+    display: none;
+
+    background: linear-gradient(90deg, black 0%, white 100%);
+    right: 17%;
+    bottom: 0;
+    width: 15%;
+    height: 24%;
+    z-index: -5;
+  }
 }
 
 .Footer {
@@ -36,13 +92,13 @@ html {
   flex-grow: 1;
 }
 
-.RobotoLight{
-  font-family: 'Roboto', sans-serif;
+.RobotoLight {
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
 
-.SlabBold{
-  font-family: 'Roboto Slab', serif;
+.SlabBold {
+  font-family: "Roboto Slab", serif;
   font-weight: 700;
 }
 
@@ -59,49 +115,49 @@ html {
   color: white;
 }
 
-.DarkGreen {
-  color: $DarkGreen;
+.PrimaryColor {
+  color: $PrimaryColor;
 }
 
-.DarkGreenBg {
-  background-color: $DarkGreen;
+.PrimaryColorBg {
+  background-color: $PrimaryColor;
 }
 
-.SeaGreen {
-  color: $SeaGreen;
+.SecondaryColor {
+  color: $SecondaryColor;
 }
 
-.SeaGreenBg {
-  background-color: $SeaGreen;
+.SecondaryColorBg {
+  background-color: $SecondaryColor;
 }
 
-.PaleGreen {
-  color: $PaleGreen;
+.TertiaryColor {
+  color: $TertiaryColor;
 }
 
-.PaleGreenBg {
-  background-color: $PaleGreen;
+.TertiaryColorBg {
+  background-color: $TertiaryColor;
 }
 
-.WhiteishGreen {
-  color: $WhiteishGreen;
+.ColorWhite1 {
+  color: $ColorWhite1;
 }
 
-.WhiteishGreenBg {
-  background-color: $WhiteishGreen;
+.ColorWhite1Bg {
+  background-color: $ColorWhite1;
 }
 
-.BlackishGray {
-  color: $BlackishGray;
+.ColorDark1 {
+  color: $ColorDark1;
 }
 
-.BlackishGrayBg {
-  background-color: $BlackishGray;
+.ColorDark1Bg {
+  background-color: $ColorDark1;
 }
 
 #CV {
   display: none;
-  &.Show{
+  &.Show {
     display: block;
     animation: fadeIn 0.3s ease-out;
   }
@@ -171,7 +227,7 @@ html {
 }
 
 .FadeIn {
-  animation: fadeIn 0.8s ease-out
+  animation: fadeIn 0.8s ease-out;
 }
 
 @keyframes fadeIn {

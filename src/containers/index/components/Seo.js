@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-const Seo = ({animate}) => {
+const Seo = ({ animate }) => {
   const data = useStaticQuery(graphql`
     query {
       file(name: { eq: "diagram" }) {
@@ -23,7 +23,7 @@ const Seo = ({animate}) => {
         <h2 className="CenterText White SlabBold">
           BETTER TECH BETTER UX <br /> BETTER SEO MORE CLICKS
         </h2>
-        <p className="JustifyText WhiteishGreen">
+        <p className="JustifyText ColorWhite1">
           You have the better tech, it will provide better User Experience (UX),
           your pages will be rendered on server thus Search Engine Crawlers will
           give you the best possible grades on their charts thus providing more

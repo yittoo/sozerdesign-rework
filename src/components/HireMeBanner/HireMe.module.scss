@@ -1,5 +1,7 @@
+@import "../../styles/variables";
+
 .HireMe {
-  background-color: #327160;
+  background-color: $PrimaryColor;
   padding: 1rem;
   display: flex;
   align-content: center;
@@ -10,18 +12,19 @@
     text-align: center;
     display: inline-block;
     margin: 0 1.5rem;
-    &:hover{
-      text-shadow: 0 0 0.5rem #c8e6c477;
+    &:hover {
+      text-shadow: 0 0 0.5rem rgba($PrimaryColor, 0.4);
     }
   }
   .ContactIcons {
     display: flex;
     align-items: center;
-    div, a{
+    div,
+    a {
       margin: 0 0.2rem;
-      &:first-child:hover{
+      &:first-child:hover {
         border-radius: 50%;
-        box-shadow: 0 0 2rem #c8e6c477;
+        box-shadow: 0 0 2rem rgba($PrimaryColor, 0.4);
       }
     }
     img {

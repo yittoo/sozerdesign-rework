@@ -48,16 +48,19 @@ const Navbar = () => {
 
   const navItems = [
     <li className={classes.NavItem} key="7">
-      <Link to="/#About">ABOUT</Link>
+      <Link to="/">ABOUT</Link>
     </li>,
-    <li className={classes.NavItem} key="9">
-      <Link to="/#Seo">SEO</Link>
-    </li>,
-    <li className={classes.NavItem} key="0">
-      <Link to="/#Services">SERVICES</Link>
-    </li>,
+    // <li className={classes.NavItem} key="9">
+    //   <Link to="/#Seo">SEO</Link>
+    // </li>,
+    // <li className={classes.NavItem} key="0">
+    //   <Link to="/#Services">SERVICES</Link>
+    // </li>,
+    // <li className={classes.NavItem} key="1">
+    //   <Link to="/#Portfolio">PORTFOLIO</Link>
+    // </li>,
     <li className={classes.NavItem} key="1">
-      <Link to="/#Portfolio">PORTFOLIO</Link>
+      <Link to="/blog">BLOG</Link>
     </li>,
     // <li className={classes.NavItem} key="2">
     //   <Link to="/#Contact">CONTACT</Link>
@@ -84,7 +87,7 @@ const Navbar = () => {
   return (
     <ul
       className={
-        classes.Navbar + " WhiteishGreen " + (navIsFixed ? classes.Fixed : "")
+        classes.Navbar + " ColorWhite1 " + (navIsFixed ? classes.Fixed : "")
       }
     >
       <li className={classes.Logo + " White SlabBold"}>

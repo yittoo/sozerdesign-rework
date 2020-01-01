@@ -3,7 +3,7 @@ import path from "path"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-export const Services = ({animate}) => {
+export const Services = ({ animate }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { name: { in: ["responsive", "api", "server"] } }) {
@@ -26,7 +26,7 @@ export const Services = ({animate}) => {
     castedImgs[baseName] = { ...node.childImageSharp.fluid }
   })
   return (
-    <div id="Services" className="BlackishGray Container">
+    <div id="Services" className="ColorDark1 Container">
       <div className={`col ${animate ? "EnterFromBottom" : "Transparent"}`}>
         <Img alt="responsive" fluid={{ ...castedImgs.responsive }} />
         <h2 className="CenterText SlabBold">EVERY DEVICE</h2>
@@ -47,8 +47,8 @@ export const Services = ({animate}) => {
         <Img alt="api" fluid={{ ...castedImgs.api }} />
         <h2 className="CenterText SlabBold">INTEGRATION</h2>
         <p className="JustifyText">
-          If you want to have access to changing your content, or need
-          an integration with another service. That can and will be done.
+          If you want to have access to changing your content, or need an
+          integration with another service. That can and will be done.
         </p>
       </div>
     </div>

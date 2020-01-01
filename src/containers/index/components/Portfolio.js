@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-const Portfolio = ({animate}) => {
+const Portfolio = ({ animate }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { name: { in: ["stethoscope", "wall-clock"] } }) {
@@ -24,17 +24,30 @@ const Portfolio = ({animate}) => {
         <div className="col-3 Placeholder">PLACEHOLDER</div>
         <div className="col-3 Placeholder">PLACEHOLDER</div>
       </div> */}
-      <h3 className={`CenterText White SlabBold ${animate ? "EnterFromLeft" : "Transparent"}`}>OWN PROJECTS</h3>
-      <p className={`JustifyText WhiteishGreen ${animate ? "EnterFromRight" : "Transparent"}`}>
+      <h3
+        className={`CenterText White SlabBold ${
+          animate ? "EnterFromLeft" : "Transparent"
+        }`}
+      >
+        OWN PROJECTS
+      </h3>
+      <p
+        className={`JustifyText ColorWhite1 ${
+          animate ? "EnterFromRight" : "Transparent"
+        }`}
+      >
         Apart from freelancing I spend my time building my own side projects.
       </p>
       <div className="Flex Flex-2">
         <div className={`col-2 Image ${animate ? "FadeIn" : "Transparent"}`}>
-          <Img alt="clock" fluid={{ ...data.allFile.nodes[1].childImageSharp.fluid }} />
+          <Img
+            alt="clock"
+            fluid={{ ...data.allFile.nodes[1].childImageSharp.fluid }}
+          />
         </div>
         <div className={`col-2 ${animate ? "EnterFromBottom" : "Transparent"}`}>
           <h3 className="CenterText White SlabBold">Boss Time Tracker:</h3>
-          <p className="JustifyText WhiteishGreen">
+          <p className="JustifyText ColorWhite1">
             For a game called Ragnarok Online. Players are capable of
             registering and using this service free of charge through{" "}
             <a
@@ -55,7 +68,7 @@ const Portfolio = ({animate}) => {
           <h3 className="CenterText White SlabBold">
             Medical Information Site:
           </h3>
-          <p className="JustifyText WhiteishGreen">
+          <p className="JustifyText ColorWhite1">
             Still in progress, a site that allows medical personel to share
             information about diseases, symptoms, treatments over web by forming
             connection between each for Turkish Public to see. Also allows
@@ -72,7 +85,10 @@ const Portfolio = ({animate}) => {
           </p>
         </div>
         <div className={`col-2 Image ${animate ? "FadeIn" : "Transparent"}`}>
-          <Img alt="stetescope" fluid={{ ...data.allFile.nodes[0].childImageSharp.fluid }} />
+          <Img
+            alt="stetescope"
+            fluid={{ ...data.allFile.nodes[0].childImageSharp.fluid }}
+          />
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 import Seo from "./components/Seo"
 import Services from "./components/Services"
 import Portfolio from "./components/Portfolio"
-import Contact from "./components/Contact"
+// import Contact from "./components/Contact"
 
 const IndexContainer = () => {
   const [hasAnimated, setAnimated] = useState({
@@ -17,10 +17,10 @@ const IndexContainer = () => {
     const scrolledDistance = window.scrollY
     const idsArr = Object.keys(hasAnimated).filter(key => !hasAnimated[key])
     idsArr.forEach(id => {
-      if (
-        scrolledDistance + viewportConstant >
-        document.querySelector("#" + id).offsetTop
-      ) {
+      const element = document.querySelector("#" + id)
+        ? document.querySelector("#" + id)
+        : {}
+      if (scrolledDistance + viewportConstant > element.offsetTop) {
         setAnimated({
           ...hasAnimated,
           [id]: true,
@@ -28,6 +28,10 @@ const IndexContainer = () => {
       }
     })
   }
+
+  useEffect(() => {
+    checkIfAnimate()
+  }, [])
 
   useEffect(() => {
     window.addEventListener("scroll", checkIfAnimate)
