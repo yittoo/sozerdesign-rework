@@ -30,7 +30,7 @@ const HireMe = ({ onToggleCV }) => {
   const imgToRender = (
     <div className={classes.ContactIcons}>
       <a
-        href="https://www.linkedin.com/in/yi%C4%9Fit-s%C3%B6zer/"
+        href="https://www.linkedin.com/in/yigitsozer/"
         rel="noreferrer noopener"
         target="_blank"
       >
