@@ -7,7 +7,7 @@ module.exports = {
     author: "Yiğit Sözer",
     links: {
       github: "https://github.com/yittoo",
-      linkedin: "https://www.linkedin.com/in/yi%C4%9Fit-s%C3%B6zer/",
+      linkedin: "https://www.linkedin.com/in/yigitsozer",
     },
   },
   plugins: [
