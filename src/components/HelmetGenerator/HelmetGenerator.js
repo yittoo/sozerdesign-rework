@@ -27,7 +27,7 @@ const HelmetGenerator = props => {
       <meta name="author" content={siteMetadata.author} />
       <meta
         name="description"
-        content="Portfolio Site of Freelance Full Stack Web Developer using React, Node, GraphQL"
+        content="Just a programmer making his way through the galaxy."
       />
       <meta
         name="keywords"
