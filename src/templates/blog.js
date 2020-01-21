@@ -34,7 +34,7 @@ const Blog = props => {
         const { value } = node.content[0]
         if (uri) {
           return (
-            <a rel="noopener noreferrer" href={uri}>
+            <a rel="noopener noreferrer" href={uri} target="_blank">
               {value}
             </a>
           )
