@@ -29,6 +29,17 @@ const Blog = props => {
           return <img src={url} alt={alt} />
         }
       },
+      hyperlink: node => {
+        const { uri } = node.data
+        const { value } = node.content[0]
+        if (uri) {
+          return (
+            <a rel="noopener noreferrer" href={uri}>
+              {value}
+            </a>
+          )
+        }
+      },
     },
   }
   const { title, date, content } = props.data.contentfulPost

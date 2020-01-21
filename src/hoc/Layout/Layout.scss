@@ -23,6 +23,11 @@ html {
   font-size: 62.5%;
 }
 
+a:link,
+a:visited {
+  color: $TertiaryColor;
+}
+
 .Layout {
   display: flex;
   flex-direction: column;
