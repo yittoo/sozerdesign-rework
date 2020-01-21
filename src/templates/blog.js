@@ -43,7 +43,6 @@ const Blog = props => {
     },
   }
   const { title, date, content } = props.data.contentfulPost
-  console.log(content.json)
   const blogBody = documentToReactComponents(content.json, options)
   return (
     <Layout>
