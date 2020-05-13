@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import classes from "./Navbar.module.scss"
 import SideDrawer from "./SideDrawer/SideDrawer"
 
-const Navbar = () => {
+const Navbar = props => {
   let showBurger, toggleBurger
   const [navIsFixed, toggleNav] = useState(false)
   if (typeof document !== `undefined`) {
@@ -47,28 +47,34 @@ const Navbar = () => {
   )
 
   const navItems = [
-    <li className={classes.NavItem} key="7">
-      <Link to="/">ABOUT</Link>
-    </li>,
-    // <li className={classes.NavItem} key="9">
-    //   <Link to="/#Seo">SEO</Link>
-    // </li>,
-    // <li className={classes.NavItem} key="0">
-    //   <Link to="/#Services">SERVICES</Link>
-    // </li>,
-    // <li className={classes.NavItem} key="1">
-    //   <Link to="/#Portfolio">PORTFOLIO</Link>
-    // </li>,
     <li className={classes.NavItem} key="1">
-      <Link to="/blog">BLOG</Link>
+      <Link to="/">About</Link>
     </li>,
-    // <li className={classes.NavItem} key="2">
-    //   <Link to="/#Contact">CONTACT</Link>
-    // </li>,
-    // <li key="3">CAREER</li>,
-    // <li key="4">
-    //   <Link to="/blog">BLOG</Link>
-    // </li>,
+
+    <li className={classes.NavItem} key="2">
+      <Link to="/blog">Blog</Link>
+    </li>,
+    <li className={classes.NavItem} key="3">
+      <a
+        href="https://www.linkedin.com/in/yigitsozer/"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        LinkedIn
+      </a>
+    </li>,
+    <li className={classes.NavItem} key="4">
+      <a
+        href="https://github.com/yittoo"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        GitHub
+      </a>
+    </li>,
+    <li className={classes.NavItem} key="5">
+      <div onClick={props.onToggleCV}>CV</div>
+    </li>,
   ]
 
   const contentToRender = showBurger ? (

@@ -8,6 +8,7 @@ import IndexContainer from "../containers/index"
 
 import About from "../containers/index/components/About"
 import "./index.scss"
+import { Hero } from "../containers/Hero/Hero"
 
 const Index = () => {
   // const data = useStaticQuery(graphql`
@@ -28,10 +29,10 @@ const Index = () => {
       {/* <BackgroundImage fluid={imgData} className="InitialBackground"> */}
       <div className="InitialBackground">
         <Header title="Welcome" />
-        <About />
+        <Hero />
       </div>
       {/* </BackgroundImage> */}
-      <IndexContainer />
+      {/* <IndexContainer /> */}
     </Layout>
   )
 }

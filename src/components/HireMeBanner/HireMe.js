@@ -49,7 +49,7 @@ const HireMe = ({ onToggleCV }) => {
     </div>
   )
   return (
-    <div className={classes.HireMe + " PrimaryColorBg ColorWhite1"}>
+    <div className={classes.HireMe + " ColorWhite1"}>
       <p>Want to contact me? Here is my information</p>
       {imgToRender}
     </div>

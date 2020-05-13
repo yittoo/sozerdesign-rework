@@ -16,7 +16,7 @@ const Footer = () => {
   const { title } = data.site.siteMetadata
 
   return (
-    <div className="Footer ColorWhite1 PrimaryColorBg">
+    <div className="Footer ColorWhite1 ">
       Copyright © 2019{" "}
       {new Date().getFullYear() !== 2019
         ? "- " + new Date().getFullYear()

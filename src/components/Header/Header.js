@@ -14,8 +14,8 @@ const Header = ({ title }) => {
   return (
     <React.Fragment>
       <Helmet title={title} />
-      <HireMe onToggleCV={toggleCvHandler} />
-      <Navbar />
+      <Navbar onToggleCV={toggleCvHandler} />
+      {/* <HireMe onToggleCV={toggleCvHandler} /> */}
       <CV show={showCV} onToggleCV={toggleCvHandler} />
     </React.Fragment>
   )

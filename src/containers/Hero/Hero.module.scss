@@ -1,0 +1,50 @@
+.HeroContent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  max-width: 1000px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  h1,
+  h2,
+  h4 {
+    color: #ffffff;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 4rem;
+  }
+  .Col {
+    &:not(:first-child) {
+      margin-left: auto;
+    }
+    &:not(:last-child) {
+      margin-right: auto;
+    }
+    @media only screen and (max-width: 900px) {
+      margin: 0 auto;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+}
+.BackgroundImage {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -15;
+  * {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
