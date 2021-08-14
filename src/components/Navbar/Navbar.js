@@ -97,7 +97,7 @@ const Navbar = props => {
       }
     >
       <li className={classes.Logo + " White SlabBold"}>
-        <Link to="/">SozerDesign</Link>
+        <Link to="/">Yiğit Sözer</Link>
       </li>
       {contentToRender}
     </ul>
